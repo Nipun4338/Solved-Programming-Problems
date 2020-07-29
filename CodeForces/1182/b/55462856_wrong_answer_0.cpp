@@ -1,0 +1,123 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int a,b,d=0,e=0,f=0,g=0,flag,sum=0,flag1,flag2,h=0,x=0;
+    char c[505][505];
+    cin>>a>>b;
+    for(int i=0; i<a; i++)
+    {
+        for(int j=0; j<b; j++)
+        {
+            cin>>c[i][j];
+        }
+    }
+    for(int i=0; i<a; i++)
+    {
+        for(int j=0; j<b; j++)
+        {
+            if(c[i][j]=='*')
+            {
+                d=i;
+                e=j;
+                flag1=1;
+                break;
+            }
+        }
+        if(flag1==1)
+        {
+            break;
+        }
+    }
+    for(int i=d; i<a; i++)
+    {
+        if(c[i][e]=='*')
+        {
+            f=i;
+        }
+    }
+    for(int i=0; i<a; i++)
+    {
+        for(int j=0; j<b-1; j++)
+        {
+            if(c[i][j]=='*' && c[i][j+1]=='*')
+            {
+                sum++;
+            }
+        }
+        if(sum>=3)
+        {
+            g=i;
+            break;
+        }
+        sum=0;
+    }
+    for(int j=0; j<b; j++)
+    {
+        if(c[g][j]=='*')
+        {
+            h=j;
+            break;
+        }
+    }
+    for(int j=0; j<b; j++)
+    {
+        if(c[g][j]=='*')
+        {
+            x=j;
+            flag2=1;
+        }
+        else if(flag2==1 && c[g][j]!='*')
+        {
+            break;
+        }
+        else
+        {
+            flag=0;
+        }
+    }
+    for(int i=0; i<a; i++)
+    {
+        for(int j=0; j<b; j++)
+        {
+            if(c[i][j]=='.' && i!=g)
+            {
+                flag=0;
+            }
+            else if(c[i][e]=='*' && c[i][e+1]!='*' && c[i][e-1]!='*' && i!=g)
+            {
+                flag=0;
+            }
+            else if(c[i][j]=='.' && i==g && j<h)
+            {
+                flag=0;
+            }
+            else if(c[i][j]=='*' && i==g && j>=h && j<=x && h!=e && x!=e)
+            {
+                flag=0;
+            }
+            else if(c[i][j]=='.' && i==g && j>x)
+            {
+                flag=0;
+            }
+            else
+            {
+                flag=1;
+                break;
+            }
+        }
+        if(flag==1)
+        {
+            break;
+        }
+    }
+    if(flag==0)
+    {
+        cout<<"YES"<<endl;
+    }
+    else if(flag==1)
+    {
+        cout<<"NO"<<endl;
+    }
+	return 0;
+}
