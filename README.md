@@ -9,12 +9,12 @@ ICPC 2019 Preliminary-AUST_Sacred Coders 371
 # Handles
 Oj  | Handles
 ------------- | -------------
-Codeforces.com  | NX_4338
-Codechef.com  | nhacker
-atcoder.jp | Nipun4338
-hackerearth.com | nipun4338
-onlinejudge.org(UVa) | Nipun4338
-acm.timus.ru | 260243
-hackerrank.com | nipun4338
-toph.co | NX4338
+https://codeforces.com | NX_4338
+https://www.codechef.com | nhacker
+https://atcoder.jp | Nipun4338
+https://www.hackerearth.com | nipun4338
+https://onlinejudge.org | Nipun4338
+https://acm.timus.ru | 260243
+https://www.hackerrank.com | nipun4338
+https://toph.co | NX4338
 https://lightoj.com | nipun4338
