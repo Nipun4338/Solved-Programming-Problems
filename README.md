@@ -17,4 +17,4 @@ onlinejudge.org(UVa) | Nipun4338
 acm.timus.ru | 260243
 hackerrank.com | nipun4338
 toph.co | NX4338
-lightoj.com | nipun4338
+https://lightoj.com | nipun4338
